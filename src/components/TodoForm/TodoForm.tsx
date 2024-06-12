@@ -21,6 +21,7 @@ export const TodoForm = () => {
 		}
 
 		addTodo(todo)
+		setValue('')
 	}
 
 	return (
@@ -30,6 +31,7 @@ export const TodoForm = () => {
 			maxW={960}
 			width="100%"
 			margin="auto"
+			marginBottom={5}
 		>
 			<Wrap
 				align="center"

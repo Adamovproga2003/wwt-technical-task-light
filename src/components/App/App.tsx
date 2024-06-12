@@ -1,21 +1,28 @@
 import { useTranslation } from 'react-i18next'
 
-import { Box } from '@chakra-ui/react'
+import { Box, Heading } from '@chakra-ui/react'
 
+import { ListForm } from '@components/ListTodos'
 import { TodoForm } from '@components/TodoForm'
 
 export const App = () => {
 	const { t } = useTranslation('translation')
 	return (
-		<Box
-			maxW="90rem"
-			mx="auto"
-			minH="100dvh"
-		>
-			<h1
-				style={{ textAlign: 'center', fontSize: 40, marginBottom: 10 }}
-			>{t`Todo App`}</h1>
+		<Box>
+			<Heading
+				as="h1"
+				size="4xl"
+				noOfLines={1}
+				textAlign="center"
+				marginBlock="30px"
+				textTransform="uppercase"
+				fontWeight="extrabold"
+			>
+				{t`Todo App`}
+			</Heading>
+
 			<TodoForm />
+			<ListForm />
 		</Box>
 	)
 }
